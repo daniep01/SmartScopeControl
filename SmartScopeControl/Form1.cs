@@ -64,7 +64,7 @@ namespace SmartScopeControl
 
         private void button9_Click(object sender, EventArgs e)
         {
-            scopesClass.syncsendreceive(textBox2.Text);
+            scopesClass.syncsendreceive(textBox_msg.Text);
         }
 
         private void b_wfm_Click(object sender, EventArgs e)
@@ -126,6 +126,13 @@ namespace SmartScopeControl
         private void exitToolStripMenuItem2_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void debugToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            debugToolStripMenuItem.Checked = !debugToolStripMenuItem.Checked;
+            this.textBox_msg.Visible = !textBox_msg.Visible;
+            this.button_send.Visible = !button_send.Visible;
         }
     }
 }
