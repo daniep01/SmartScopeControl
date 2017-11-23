@@ -25,12 +25,6 @@ namespace SmartScopeControl
             }   
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            Console.WriteLine("Button connect");
-            scopesClass.connect(Properties.Settings.Default.IP);
-        }
-
         private void a_picture_Click(object sender, EventArgs e)
         {
             scopesClass.syncsendreceive("MONITOR A:\nScopeMode: Picture\n\n");
@@ -78,21 +72,6 @@ namespace SmartScopeControl
             scopesClass.disconnect();
         }
 
-        private void settingsToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void settingsToolStripMenuItem_Click_1(object sender, EventArgs e)
-        {
-      
-        }
-
-        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            
-        }
-
         private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Smart Scope Controller\nv1.0 20/11/2017\nPeter Daniel","Smart Scope", MessageBoxButtons.OK,MessageBoxIcon.Information );
@@ -104,18 +83,12 @@ namespace SmartScopeControl
             frm.ShowDialog();
         }
 
-        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
-        {
-
-        }
-
         private void connectToolStripMenuItem_Click(object sender, EventArgs e)
         {
             if (scopesClass.connected == false)
             {
                 scopesClass.connect(Properties.Settings.Default.IP);
             }
-
         }
 
         private void disconnectToolStripMenuItem_Click(object sender, EventArgs e)
@@ -133,6 +106,11 @@ namespace SmartScopeControl
             debugToolStripMenuItem.Checked = !debugToolStripMenuItem.Checked;
             this.textBox_msg.Visible = !textBox_msg.Visible;
             this.button_send.Visible = !button_send.Visible;
+        }
+
+        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
