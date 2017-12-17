@@ -27,17 +27,18 @@ namespace SmartScopeControl
 
         private void a_picture_Click(object sender, EventArgs e)
         {
-            scopesClass.syncsendreceive("MONITOR A:\nScopeMode: Picture\n\n");
+            scopesClass.syncsendreceive("MONITOR A:\n");
+            scopesClass.syncsendreceive("ScopeMode: Picture\n");
         }
 
         private void b_picture_Click(object sender, EventArgs e)
         {
-            scopesClass.syncsendreceive("MONITOR B:\nScopeMode: Picture\n\n");
+            scopesClass.syncsendreceive("MONITOR B:\nScopeMode: Picture\n");
         }
 
         private void b_audio_Click(object sender, EventArgs e)
         {
-            scopesClass.syncsendreceive("MONITOR B\nScopeMode: AudioDbfs\n\n");
+            scopesClass.syncsendreceive("MONITOR B:\nScopeMode: AudioDbfs\n");
             //scopesClass.syncsendreceive("VIDEO OUTPUT:\nVideo mode: 720p50\n\n");
         }
 
@@ -48,12 +49,12 @@ namespace SmartScopeControl
 
         private void a_wfm_Click(object sender, EventArgs e)
         {
-            scopesClass.syncsendreceive("MONITOR A:\nScopeMode: ParadeRGB\n\n");
+            scopesClass.syncsendreceive("MONITOR A:\nScopeMode: ParadeRGB\n");
         }
 
         private void a_audio_Click(object sender, EventArgs e)
         {
-            scopesClass.syncsendreceive("MONITOR A\nScopeMode: AudioDbfs\n\n");
+            scopesClass.syncsendreceive("MONITOR A:\nScopeMode: AudioDbfs\n");
         }
 
         private void button9_Click(object sender, EventArgs e)
@@ -63,7 +64,7 @@ namespace SmartScopeControl
 
         private void b_wfm_Click(object sender, EventArgs e)
         {
-            scopesClass.syncsendreceive("MONITOR B:\nScopeMode: ParadeRGB\n\n");
+            scopesClass.syncsendreceive("MONITOR B:\nScopeMode: ParadeRGB\n");
         }
 
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)

@@ -13,7 +13,7 @@ namespace SmartScopeControl
 {
     public class Scopes
     {
-        int ScopePort = 9800;
+        int ScopePort = 9992;
         Socket syncsender;
 
         public Boolean connected = false;
@@ -31,7 +31,7 @@ namespace SmartScopeControl
 
                 syncsender = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
                 syncsender.SendTimeout = 10;
-                syncsender.ReceiveTimeout = 100;
+                syncsender.ReceiveTimeout = 10;
 
                 // establish connection 
                 syncsender.Connect(remoteEP);
@@ -62,7 +62,7 @@ namespace SmartScopeControl
             Console.WriteLine("Disconnected");
         }
 
-        public void syncsendreceive(string command, int waitTime = 500)
+        public void syncsendreceive(string command, int waitTime = 100)
         {
             // check for connection
             if (syncsender == null || syncsender.Connected == false)
